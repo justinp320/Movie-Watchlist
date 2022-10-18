@@ -1,0 +1,1 @@
+Movie search and watchlist using OMDb API and Localstorage

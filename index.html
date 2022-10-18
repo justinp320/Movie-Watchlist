@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Movie Watchlist</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <div class="header-text">
+                <h1>Find your film</h1>
+                <a class="navigate" href="watchlist.html">My Watchlist</a>
+            </div>
+        </header>
+        <main class="search-main">
+            <form>
+                <input class="search-bar" id="search" placeholder="Search for a movie" autocomplete="off">
+                <button class="submit-btn" id="submit-btn" type="submit">Search</button>
+            </form>
+            <div id="container">
+                <div class="initial-state">
+                    <img src="images/initial-icon.svg">
+                    <p>Start exploring</p>
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
