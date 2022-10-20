@@ -26,7 +26,8 @@ async function showResults(){
     let plotHtml = `<p class="movie-plot-text">${data.Plot}</p>`
     if (data.Plot.length > 125){
       plotHtml = `<p class="movie-plot-text">${data.Plot.substring(0,125)}<span class = "read-more" >...<button data-show="${data.imdbID}" id="read-more-btn">Read more</button></span>
-                  <span class="hidden-text">${data.Plot.substring(125, data.Plot.length)}</span></p>`
+                  <span class="hidden-text">${data.Plot.substring(125, data.Plot.length)}<button data-hide="${data.imdbID}" id="read-less-btn">Read less</button></span>
+                  </p>`
     }
     resultsHtml += `
     <div class="movie" id="${data.imdbID}">
@@ -80,6 +81,11 @@ document.addEventListener('click', function(e){
     document.getElementById(e.target.dataset.show).querySelector('.read-more').classList.add("hide")
     document.getElementById(e.target.dataset.show).querySelector('#read-more-btn').classList.add("hide")
     document.getElementById(e.target.dataset.show).querySelector('.hidden-text').style.display = 'inline'
+  }
+  else if(e.target.id === 'read-less-btn'){
+    document.getElementById(e.target.dataset.hide).querySelector('.read-more').classList.remove("hide")
+    document.getElementById(e.target.dataset.hide).querySelector('#read-more-btn').classList.remove("hide")
+    document.getElementById(e.target.dataset.hide).querySelector('.hidden-text').style.display = 'none'
   }
 })
 
