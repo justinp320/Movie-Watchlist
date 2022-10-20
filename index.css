@@ -263,3 +263,11 @@ a:hover{
 .hide{
     display: none;
 }
+
+button:hover{
+    text-decoration: underline;
+}
+
+.submit-btn:hover{
+    text-decoration: none;
+}
