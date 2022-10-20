@@ -255,6 +255,17 @@ a:hover{
     cursor: pointer;
 } 
 
+#read-less-btn{
+    border: none; 
+    background-color: inherit;
+    padding: 0;
+    padding-left: 3px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #272727;
+    cursor: pointer; 
+}
 
 .full-plot{
     display: inline;
